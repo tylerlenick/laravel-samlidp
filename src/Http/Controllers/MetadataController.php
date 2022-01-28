@@ -18,7 +18,7 @@ class MetadataController extends Controller
         /*if (class_exists('\Barryvdh\Debugbar\Facade')) {
             \Barryvdh\Debugbar\Facade::disable();
         }*/
-
+        dd('here');
         $cert = Storage::disk('samlidp')->get(config('samlidp.certname', 'cert.pem'));
         $cert = preg_replace('/^\W+\w+\s+\w+\W+\s(.*)\s+\W+.*$/s', '$1', $cert);
         $cert = str_replace(PHP_EOL, "", $cert);
